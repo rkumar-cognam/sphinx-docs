@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>About Blended &mdash; Blended Documentation 5 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Blended Documentation 5 documentation" href="index.html" />
+    <link rel="next" title="&lt;no title&gt;" href="installation.html" />
+    <link rel="prev" title="Welcome to Blended’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="about-blended">
+<h1>About Blended<a class="headerlink" href="#about-blended" title="Permalink to this headline">¶</a></h1>
+<p>What is Blended?</p>
+<p>BlendedUX is an effort to implement Armin Ronacher?s original vision for the Twig templating language:</p>
+<blockquote>
+<div>A language-independent and simple template engine is useful for applications that use code which is written in more than one programming language.</div></blockquote>
+<p>BlendedUX makes it easy to share template code between Django, Jinja, Twig and Nunjucks template runtimes (which run in Python, Python, PHP and Javascript respectively). Going forward, we also want to add compatibility for template languages that work with Java, Go, Ruby, .NET and Erlang.</p>
+<p>How Does Blended Work?
+BlendedUX specifies a powerful cross-platform template language using syntax that was first introduced by the Django Web Framework and was later extended and popularized by the Jinja2 and Twig templating languages. Blended Language looks like this:</p>
+<p>{% extends ?base.html? %}
+{% block content %}</p>
+<blockquote>
+<div><p>{% if not empty(page.images) %}
+&lt;ul class=?gallery?&gt;</p>
+<blockquote>
+<div>{% for image in page.images %}
+&lt;li&gt;&lt;img src={{ image.url }}&gt;&lt;/li&gt;
+{% endfor %}</div></blockquote>
+<p>&lt;/ul&gt;
+{% endif %}</p>
+</div></blockquote>
+<p>{% endblock %}</p>
+<p>The BlendedUX project doesn?t provide its own implementation of the ?Blended Language?, however. We believe that doing so would work against our primary objective, which is to persuade the diverse communities working on Django-derived template languages to implement a common, well-defined subset of language features.</p>
+<p>Instead, the Blended project (currently) consists of the following components:</p>
+<p>A draft language specification, in the form of a formal context-free grammar, test cases, and descriptive documentation;
+A lint program capable of highlighting where individual template files deviate from the specification (and are therefore not cross-platform compatible);
+Extension libraries for each of the supported template runtimes (Django, Jinja, Twig and Nunjucks) that bring them in compliance with the specification.
+The extension libraries that we have implemented for Django, Jinja, Twig and Nunjucks mean that the Blended Language is a real thing, usable today, right now. If you add these extensions to your projects, you will be able to use any template that is accepted by Blended-Lint. And these libraries are not forks?they are targeted enhancements (most limited to less than 200 total LOC) that track to the most recent version of each template language implementation.</p>
+<p>Blended?s extension libraries are currently in ?beta? status, so we do not recommend anyone else use them in production yet without extensive testing. Still, we ourselves have been using them in production to varying degrees for some time. By open-sourcing this project we hope that people start using our code, improve the stability of these libraries, and demonstrate through use that the project?s objective is a realistic and worthwhile endeavor.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Blended&#8217;s documentation!</a></li>
+      <li>Next: <a href="installation.html" title="next chapter">&lt;no title&gt;</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/aboutblanded.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Aldo Avila.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/aboutblanded.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
